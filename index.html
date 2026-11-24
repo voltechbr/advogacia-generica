@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nome do Escritório Advocacia</title>
+  <meta name="description" content="Escritório de advocacia com atendimento próximo, análise cuidadosa e linguagem clara.">
+  <meta name="theme-color" content="#0e1a2b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <script>document.documentElement.classList.add("is-loading");setTimeout(function(){document.documentElement.classList.remove("is-loading")},10000)</script>
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cursor.css">
+</head>
+<body>
+  <!-- Tela de carregamento: logomarca e progresso. Troque o SVG pela sua logomarca, se desejar. -->
+  <div class="loader" id="loader" role="progressbar" aria-label="Carregando o site" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-poster="assets/img/hero-poster.jpg">
+    <div class="loader__inner">
+      <svg class="loader__mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="1" y="1" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1"/>
+        <text x="24" y="31" text-anchor="middle" data-bind="brand.monogram">NE</text>
+      </svg>
+      <div class="loader__name"><strong data-bind="brand.name">Nome do Escritório</strong><small data-bind="brand.suffix">Advocacia</small></div>
+      <div class="loader__progress" aria-hidden="true"><span class="loader__bar"><i></i></span><span class="loader__pct">0</span></div>
+    </div>
+  </div>
+  <script src="js/loader.js"></script>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="brand" href="#inicio" aria-label="Início">
+        <!-- Substitua este SVG pela sua logomarca (ou use <img src="assets/img/logo.svg">) -->
+        <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="1" y="1" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1"/>
+          <text x="24" y="31" text-anchor="middle" data-bind="brand.monogram">NE</text>
+        </svg>
+        <span class="brand__text"><strong data-bind="brand.name">Nome do Escritório</strong><small data-bind="brand.suffix">Advocacia</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul id="navList"></ul>
+        <a class="btn btn--ghost nav__cta" id="navCta" href="#atendimento" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 0 1 12 3.8zM8.6 7.4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.9 4.5 4 2.2.9 2.7.7 3.2.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.3-.8-.7-1.3-1.5-1.4-1.8-.1-.3 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4z"/></svg><span>Fale pelo WhatsApp</span></a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="scrim" id="scrim" aria-hidden="true"></div>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/video/hero.webm" type="video/webm">
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__id" data-bind="hero.identity">Advocacia consultiva e contenciosa</p>
+        <h1 class="hero__title" data-bind="hero.title">Cada caso começa por uma boa escuta.</h1>
+        <p class="hero__text" data-bind="hero.text"></p>
+        <div class="hero__actions">
+          <a class="btn btn--gold" id="heroPrimary" href="#atendimento"></a>
+          <a class="btn btn--line" id="heroSecondary" href="#escritorio"></a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#escritorio" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <!-- Próximas seções (prompts seguintes) entram aqui -->
+    <section class="about" id="escritorio" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="about__top">
+          <div class="about__head reveal">
+            <h2 class="about__title" id="about-title" data-bind="about.title">Direito conduzido com método, clareza e proximidade.</h2>
+            <p class="about__intro" data-bind="about.intro"></p>
+          </div>
+          <!-- FOTO: substitua o conteúdo de .slot__frame por <img src="assets/img/escritorio-1.jpg" alt="..."> (proporção 4:5) -->
+          <figure class="slot slot--arch reveal">
+            <div class="slot__frame"><svg class="slot__ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="8" width="26" height="18" fill="none" stroke="currentColor"/><circle cx="16" cy="17" r="5" fill="none" stroke="currentColor"/><path d="M11 8l2-3h6l2 3" fill="none" stroke="currentColor"/></svg></div>
+          </figure>
+        </div>
+
+        <div class="rule" aria-hidden="true"><i></i></div>
+
+        <div class="about__row">
+          <h3 class="about__h reveal" data-bind="about.history.heading">Nossa história</h3>
+          <div class="about__text reveal">
+            <p class="dropcap" data-bind="about.history.p1"></p>
+            <p data-bind="about.history.p2"></p>
+          </div>
+          <!-- FOTO: substitua por <img src="assets/img/escritorio-2.jpg" alt="..."> (proporção 4:3) -->
+          <figure class="slot slot--wide reveal">
+            <div class="slot__frame"><svg class="slot__ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="8" width="26" height="18" fill="none" stroke="currentColor"/><circle cx="16" cy="17" r="5" fill="none" stroke="currentColor"/><path d="M11 8l2-3h6l2 3" fill="none" stroke="currentColor"/></svg></div>
+          </figure>
+        </div>
+
+        <div class="rule" aria-hidden="true"><i></i></div>
+
+        <div class="about__row about__row--phil">
+          <div class="about__hcol reveal">
+            <h3 class="about__h" data-bind="about.philosophy.heading">Como trabalhamos</h3>
+            <p class="about__small" data-bind="about.philosophy.intro"></p>
+          </div>
+          <ul class="principles reveal">
+            <li><h4 data-bind="about.philosophy.items.0.title"></h4><p data-bind="about.philosophy.items.0.text"></p></li>
+            <li><h4 data-bind="about.philosophy.items.1.title"></h4><p data-bind="about.philosophy.items.1.text"></p></li>
+            <li><h4 data-bind="about.philosophy.items.2.title"></h4><p data-bind="about.philosophy.items.2.text"></p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stance">
+        <div class="wrap stance__grid">
+          <p class="stance__statement reveal" data-bind="about.positioning.statement"></p>
+          <ul class="stance__points reveal">
+            <li data-bind="about.positioning.points.0"></li>
+            <li data-bind="about.positioning.points.1"></li>
+            <li data-bind="about.positioning.points.2"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="areas" id="atuacao" aria-labelledby="areas-title">
+      <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+        <symbol id="ic-civil" viewBox="0 0 64 64"><path d="M8 24 32 9l24 15z"/><path d="M15 29v21M26 29v21M38 29v21M49 29v21"/><path d="M8 55h48M11 50h42"/></symbol>
+        <symbol id="ic-empresarial" viewBox="0 0 64 64"><rect x="9" y="36" width="11" height="19"/><rect x="26.5" y="23" width="11" height="32"/><rect x="44" y="9" width="11" height="46"/><path d="M5 59h54"/></symbol>
+        <symbol id="ic-trabalhista" viewBox="0 0 64 64"><rect x="5" y="22" width="34" height="20" rx="10"/><rect x="25" y="22" width="34" height="20" rx="10"/></symbol>
+        <symbol id="ic-familia" viewBox="0 0 64 64"><circle cx="24" cy="36" r="16"/><circle cx="40" cy="36" r="16"/><circle cx="32" cy="10" r="4"/></symbol>
+        <symbol id="ic-previdenciario" viewBox="0 0 64 64"><path d="M16 7h32M16 57h32"/><path d="M19 7c0 15 13 15 13 25S19 42 19 57M45 7c0 15-13 15-13 25s13 10 13 25"/><path d="M26 49h12"/></symbol>
+      </svg>
+      <div class="wrap">
+        <header class="areas__head">
+          <h2 class="areas__title reveal" id="areas-title" data-bind="areas.heading">Especialidades que acompanham as decisões importantes.</h2>
+          <p class="areas__intro reveal" data-bind="areas.intro"></p>
+        </header>
+        <ul class="areas__grid">
+          <li class="areas__item areas__item--civil reveal" style="--i:0">
+            <article class="card card--navy">
+              <!-- IMAGEM (opcional): coloque <img src="assets/img/area-civil.jpg" alt=""> dentro de .card__media; o motivo gráfico some automaticamente -->
+              <div class="card__media"></div>
+              <svg class="card__motif" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-civil"/></svg>
+              <span class="card__icon"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-civil"/></svg></span>
+              <div class="card__body">
+                <h3 class="card__title" data-bind="areas.items.0.title">Direito Civil</h3>
+                <p class="card__text" data-bind="areas.items.0.text"></p>
+                <ul class="card__tags"><li data-bind="areas.items.0.tags.0"></li><li data-bind="areas.items.0.tags.1"></li><li data-bind="areas.items.0.tags.2"></li></ul>
+                <a class="card__link" href="#atendimento" data-bind="areas.linkLabel"></a>
+              </div>
+            </article>
+          </li>
+<li class="areas__item areas__item--empresarial reveal" style="--i:1">
+            <article class="card card--light">
+              <!-- IMAGEM (opcional): coloque <img src="assets/img/area-empresarial.jpg" alt=""> dentro de .card__media; o motivo gráfico some automaticamente -->
+              <div class="card__media"></div>
+              <svg class="card__motif" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-empresarial"/></svg>
+              <span class="card__icon"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-empresarial"/></svg></span>
+              <div class="card__body">
+                <h3 class="card__title" data-bind="areas.items.1.title">Direito Empresarial</h3>
+                <p class="card__text" data-bind="areas.items.1.text"></p>
+                <ul class="card__tags"><li data-bind="areas.items.1.tags.0"></li><li data-bind="areas.items.1.tags.1"></li><li data-bind="areas.items.1.tags.2"></li></ul>
+                <a class="card__link" href="#atendimento" data-bind="areas.linkLabel"></a>
+              </div>
+            </article>
+          </li>
+<li class="areas__item areas__item--trabalhista reveal" style="--i:2">
+            <article class="card card--light">
+              <!-- IMAGEM (opcional): coloque <img src="assets/img/area-trabalhista.jpg" alt=""> dentro de .card__media; o motivo gráfico some automaticamente -->
+              <div class="card__media"></div>
+              <svg class="card__motif" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-trabalhista"/></svg>
+              <span class="card__icon"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-trabalhista"/></svg></span>
+              <div class="card__body">
+                <h3 class="card__title" data-bind="areas.items.2.title">Direito Trabalhista</h3>
+                <p class="card__text" data-bind="areas.items.2.text"></p>
+                <ul class="card__tags"><li data-bind="areas.items.2.tags.0"></li><li data-bind="areas.items.2.tags.1"></li><li data-bind="areas.items.2.tags.2"></li></ul>
+                <a class="card__link" href="#atendimento" data-bind="areas.linkLabel"></a>
+              </div>
+            </article>
+          </li>
+<li class="areas__item areas__item--familia reveal" style="--i:3">
+            <article class="card card--graphite">
+              <!-- IMAGEM (opcional): coloque <img src="assets/img/area-familia.jpg" alt=""> dentro de .card__media; o motivo gráfico some automaticamente -->
+              <div class="card__media"></div>
+              <svg class="card__motif" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-familia"/></svg>
+              <span class="card__icon"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-familia"/></svg></span>
+              <div class="card__body">
+                <h3 class="card__title" data-bind="areas.items.3.title">Direito de Família</h3>
+                <p class="card__text" data-bind="areas.items.3.text"></p>
+                <ul class="card__tags"><li data-bind="areas.items.3.tags.0"></li><li data-bind="areas.items.3.tags.1"></li><li data-bind="areas.items.3.tags.2"></li></ul>
+                <a class="card__link" href="#atendimento" data-bind="areas.linkLabel"></a>
+              </div>
+            </article>
+          </li>
+<li class="areas__item areas__item--previdenciario reveal" style="--i:4">
+            <article class="card card--navy">
+              <!-- IMAGEM (opcional): coloque <img src="assets/img/area-previdenciario.jpg" alt=""> dentro de .card__media; o motivo gráfico some automaticamente -->
+              <div class="card__media"></div>
+              <svg class="card__motif" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-previdenciario"/></svg>
+              <span class="card__icon"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-previdenciario"/></svg></span>
+              <div class="card__body">
+                <h3 class="card__title" data-bind="areas.items.4.title">Direito Previdenciário</h3>
+                <p class="card__text" data-bind="areas.items.4.text"></p>
+                <ul class="card__tags"><li data-bind="areas.items.4.tags.0"></li><li data-bind="areas.items.4.tags.1"></li><li data-bind="areas.items.4.tags.2"></li></ul>
+                <a class="card__link" href="#atendimento" data-bind="areas.linkLabel"></a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="areas__cta reveal">
+          <p data-bind="areas.cta.text"></p>
+          <a class="btn btn--navy" id="areasCta" href="#atendimento">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+    <section class="team" id="advogados" aria-labelledby="team-title">
+      <div class="wrap">
+        <header class="team__head">
+          <p class="team__eyebrow reveal" data-bind="team.eyebrow">Equipe</p>
+          <h2 class="team__title reveal" id="team-title" data-bind="team.heading">Profissionais que acompanham cada caso de perto.</h2>
+          <p class="team__intro reveal" data-bind="team.intro"></p>
+        </header>
+        <ul class="team__grid">
+          <li class="team__item team__item--feat reveal" style="--i:0">
+            <article class="pro pro--feat">
+              <!-- FOTO: coloque <img src="assets/img/adv-1.jpg" alt="Nome do advogado"> dentro de .pro__photo (proporção 4:5); o espaço reservado some automaticamente -->
+              <div class="pro__photo"><svg class="pro__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.5" fill="none" stroke="currentColor"/><path d="M5 28c1.2-6 5.4-9 11-9s9.8 3 11 9" fill="none" stroke="currentColor"/></svg></div>
+              <div class="pro__body">
+                <p class="pro__role" data-bind="team.items.0.role"></p>
+                <h3 class="pro__name" data-bind="team.items.0.name"></h3>
+                <p class="pro__spec" data-bind="team.items.0.specialty"></p>
+                <p class="pro__oab"><span>Registro</span><b data-bind="team.items.0.oab"></b></p>
+              </div>
+            </article>
+          </li>
+          <li class="team__item team__item--feat reveal" style="--i:1">
+            <article class="pro pro--feat">
+              <!-- FOTO: coloque <img src="assets/img/adv-2.jpg" alt="Nome do advogado"> dentro de .pro__photo (proporção 4:5); o espaço reservado some automaticamente -->
+              <div class="pro__photo"><svg class="pro__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.5" fill="none" stroke="currentColor"/><path d="M5 28c1.2-6 5.4-9 11-9s9.8 3 11 9" fill="none" stroke="currentColor"/></svg></div>
+              <div class="pro__body">
+                <p class="pro__role" data-bind="team.items.1.role"></p>
+                <h3 class="pro__name" data-bind="team.items.1.name"></h3>
+                <p class="pro__spec" data-bind="team.items.1.specialty"></p>
+                <p class="pro__oab"><span>Registro</span><b data-bind="team.items.1.oab"></b></p>
+              </div>
+            </article>
+          </li>
+          <li class="team__item reveal" style="--i:2">
+            <article class="pro">
+              <!-- FOTO: coloque <img src="assets/img/adv-3.jpg" alt="Nome do advogado"> dentro de .pro__photo (proporção 4:5); o espaço reservado some automaticamente -->
+              <div class="pro__photo"><svg class="pro__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.5" fill="none" stroke="currentColor"/><path d="M5 28c1.2-6 5.4-9 11-9s9.8 3 11 9" fill="none" stroke="currentColor"/></svg></div>
+              <div class="pro__body">
+                <p class="pro__role" data-bind="team.items.2.role"></p>
+                <h3 class="pro__name" data-bind="team.items.2.name"></h3>
+                <p class="pro__spec" data-bind="team.items.2.specialty"></p>
+                <p class="pro__oab"><span>Registro</span><b data-bind="team.items.2.oab"></b></p>
+              </div>
+            </article>
+          </li>
+          <li class="team__item reveal" style="--i:3">
+            <article class="pro">
+              <!-- FOTO: coloque <img src="assets/img/adv-4.jpg" alt="Nome do advogado"> dentro de .pro__photo (proporção 4:5); o espaço reservado some automaticamente -->
+              <div class="pro__photo"><svg class="pro__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.5" fill="none" stroke="currentColor"/><path d="M5 28c1.2-6 5.4-9 11-9s9.8 3 11 9" fill="none" stroke="currentColor"/></svg></div>
+              <div class="pro__body">
+                <p class="pro__role" data-bind="team.items.3.role"></p>
+                <h3 class="pro__name" data-bind="team.items.3.name"></h3>
+                <p class="pro__spec" data-bind="team.items.3.specialty"></p>
+                <p class="pro__oab"><span>Registro</span><b data-bind="team.items.3.oab"></b></p>
+              </div>
+            </article>
+          </li>
+          <li class="team__item reveal" style="--i:4">
+            <article class="pro">
+              <!-- FOTO: coloque <img src="assets/img/adv-5.jpg" alt="Nome do advogado"> dentro de .pro__photo (proporção 4:5); o espaço reservado some automaticamente -->
+              <div class="pro__photo"><svg class="pro__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.5" fill="none" stroke="currentColor"/><path d="M5 28c1.2-6 5.4-9 11-9s9.8 3 11 9" fill="none" stroke="currentColor"/></svg></div>
+              <div class="pro__body">
+                <p class="pro__role" data-bind="team.items.4.role"></p>
+                <h3 class="pro__name" data-bind="team.items.4.name"></h3>
+                <p class="pro__spec" data-bind="team.items.4.specialty"></p>
+                <p class="pro__oab"><span>Registro</span><b data-bind="team.items.4.oab"></b></p>
+              </div>
+            </article>
+          </li>
+          <li class="team__item reveal" style="--i:5">
+            <article class="pro">
+              <!-- FOTO: coloque <img src="assets/img/adv-6.jpg" alt="Nome do advogado"> dentro de .pro__photo (proporção 4:5); o espaço reservado some automaticamente -->
+              <div class="pro__photo"><svg class="pro__ico" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.5" fill="none" stroke="currentColor"/><path d="M5 28c1.2-6 5.4-9 11-9s9.8 3 11 9" fill="none" stroke="currentColor"/></svg></div>
+              <div class="pro__body">
+                <p class="pro__role" data-bind="team.items.5.role"></p>
+                <h3 class="pro__name" data-bind="team.items.5.name"></h3>
+                <p class="pro__spec" data-bind="team.items.5.specialty"></p>
+                <p class="pro__oab"><span>Registro</span><b data-bind="team.items.5.oab"></b></p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <p class="team__note reveal" data-bind="team.note"></p>
+      </div>
+    </section>
+    <section class="chat" id="atendimento" aria-labelledby="chat-title">
+      <div class="wrap chat__grid">
+        <div class="chat__intro">
+          <p class="chat__eyebrow reveal" data-bind="chat.eyebrow">Atendimento</p>
+          <h2 class="chat__title reveal" id="chat-title" data-bind="chat.heading">Como podemos ajudar você hoje?</h2>
+          <p class="chat__lead reveal" data-bind="chat.intro"></p>
+          <ol class="chat__steps reveal" id="chatSteps"></ol>
+          <p class="chat__badge reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor"/><path d="M12 7.5v5.5M12 16v.5" stroke="currentColor" stroke-linecap="round" fill="none"/></svg><span data-bind="chat.disclaimer"></span></p>
+          <div class="chat__direct reveal" id="chatDirect" hidden></div>
+        </div>
+
+        <div class="chat__window reveal" role="group" aria-label="Atendimento">
+          <header class="chat__bar">
+            <span class="chat__avatar" aria-hidden="true" data-bind="brand.monogram">NE</span>
+            <div class="chat__who"><strong data-bind="chat.agent.name"></strong><small><i aria-hidden="true"></i><span data-bind="chat.agent.status"></span></small></div>
+            <span class="chat__tag" data-bind="chat.tag">Guia inicial</span>
+          </header>
+          <p class="chat__strip" data-bind="chat.stripe"></p>
+          <div class="chat__body" id="chatBody" role="log" aria-live="polite" aria-label="Conversa de atendimento"></div>
+          <div class="chat__choices" id="chatChoices" aria-label="Escolha um assunto"></div>
+          <div class="chat__input" aria-hidden="true"><span data-bind="chat.inputHint"></span><svg viewBox="0 0 24 24"><path d="M4 12 20 4l-4 16-3.5-6.5z" fill="none" stroke="currentColor" stroke-linejoin="round"/></svg></div>
+        </div>
+      </div>
+    </section>
+    <section class="faq" id="duvidas" aria-labelledby="faq-title">
+      <div class="wrap faq__grid">
+        <div class="faq__intro">
+          <p class="faq__eyebrow reveal" data-bind="faq.eyebrow">Perguntas frequentes</p>
+          <h2 class="faq__title reveal" id="faq-title" data-bind="faq.heading">Dúvidas comuns sobre o atendimento.</h2>
+          <p class="faq__lead reveal" data-bind="faq.intro"></p>
+          <div class="faq__help reveal">
+            <h3 data-bind="faq.cta.title"></h3>
+            <p data-bind="faq.cta.text"></p>
+            <a class="btn btn--gold" id="faqCta" href="#atendimento">Falar com o escritório</a>
+          </div>
+        </div>
+        <!-- As perguntas são geradas a partir de "faq.items" em site.config.js -->
+        <div class="faq__col reveal">
+          <div class="faq__list" id="faqList"></div>
+          <p class="faq__note" data-bind="faq.note"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="rodape">
+    <div class="footer__mark" aria-hidden="true" data-bind="brand.monogram">NE</div>
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#inicio" aria-label="Voltar ao início">
+            <!-- Substitua este SVG pela sua logomarca (igual à do cabeçalho) -->
+            <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="1" y="1" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1"/>
+              <text x="24" y="31" text-anchor="middle" data-bind="brand.monogram">NE</text>
+            </svg>
+            <span class="brand__text"><strong data-bind="brand.name">Nome do Escritório</strong><small data-bind="brand.suffix">Advocacia</small></span>
+          </a>
+          <p class="footer__about" data-bind="footer.about"></p>
+          <div class="footer__social" id="footerSocial"></div>
+        </div>
+        <nav class="footer__col" aria-labelledby="ft-nav"><h2 id="ft-nav" data-bind="footer.navTitle">Navegação</h2><ul id="footerNav"></ul></nav>
+        <nav class="footer__col" aria-labelledby="ft-areas"><h2 id="ft-areas" data-bind="footer.areasTitle">Atuação</h2><ul id="footerAreas"></ul></nav>
+        <div class="footer__col" role="group" aria-labelledby="ft-contact"><h2 id="ft-contact" data-bind="footer.contactTitle">Contato</h2><ul id="footerContact"></ul></div>
+      </div>
+
+      <div class="footer__inst" id="footerInst"></div>
+      <p class="footer__notice" data-bind="footer.notice"></p>
+
+      <div class="footer__bottom">
+        <p class="footer__copy"><span id="footerCopy"></span></p>
+        <ul class="footer__legal" id="footerLegal"></ul>
+        <a class="footer__top-btn" href="#inicio"><span id="footerTopLabel">Voltar ao topo</span><i aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>
